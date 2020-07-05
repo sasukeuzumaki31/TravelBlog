@@ -21,5 +21,5 @@ app.get('/aboutme', async (req, res) => {
   res.render('articles/about_me')
 })
 app.use('/articles', articleRouter)
-
-app.listen(5000)
+let port = (process.env.PORT || '5000')
+app.listen(port ,process.env.IP)
